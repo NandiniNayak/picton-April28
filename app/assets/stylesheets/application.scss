@@ -16,13 +16,21 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+
+
+
 body{
-    background-color: pink ;
+    background-color: #ffe6ff;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Spirax', cursive;
 }
 
 .navbar-default {
-    background-color: blue;
-    border-color: #e7e7e7;
+    background-color: #ffccff;
+    border-color: #e600e6;
 }
 
 .navbar-default .navbar-brand {
@@ -32,3 +40,13 @@ body{
 .navbar-default .navbar-nav > li > a {
     color: white;
 }
+
+.jumbotron {
+    background-color: #cc00cc;
+    color: white;
+}
+
+td {
+    font-family: 'Josefin Sans', sans-serif;
+}
+

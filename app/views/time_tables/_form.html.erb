@@ -12,7 +12,7 @@
     <%= f.input :room_number %>
     <%= f.input :subject %>
     <%= f.input :year_group , collection: [:year7, :year8, :year9 , :year10, :year11, :year12] %>
-    <%= f.input :student_name %>
+    <%= f.input :student_name, label: "Student Email" %>
     <%= f.input :equipment, collection: [:sports_uniform , :container, :chrome_book ] %>
     <%= f.input :assignment_due %>
   </div>

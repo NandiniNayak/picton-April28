@@ -2,7 +2,9 @@
 
 <h1>Listing Time Tables</h1>
 
-<table class = "table">
+<%= link_to 'New Time table', new_time_table_path, class: 'btn btn-info' %>
+
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Week</th>
@@ -15,10 +17,9 @@
       <th>Room number</th>
       <th>Subject</th>
       <th>Year group</th>
-      <th>Student name</th>
+      <th>Student email</th>
       <th>Equipment</th>
       <th>Assignment due</th>
-      <th>User</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -28,9 +29,9 @@
       <tr>
         <td><%= time_table.week %></td>
         <td><%= time_table.day %></td>
-        <td><%= time_table.date %></td>
-        <td><%= time_table.start_time %></td>
-        <td><%= time_table.end_time %></td>
+        <td><%= time_table.date.strftime('%a %b %y') %></td>
+        <td><%= time_table.start_time.strftime('%I:%M%P') %></td>
+        <td><%= time_table.end_time.strftime('%I:%M%P') %></td>
         <td><%= time_table.period %></td>
         <td><%= time_table.teacher %></td>
         <td><%= time_table.room_number %></td>
@@ -39,7 +40,7 @@
         <td><%= time_table.student_name %></td>
         <td><%= time_table.equipment %></td>
         <td><%= time_table.assignment_due %></td>
-        <td><%= time_table.user %></td>
+        
         <td><%= link_to 'Show', time_table %></td>
         <td><%= link_to 'Edit', edit_time_table_path(time_table) %></td>
         <td><%= link_to 'Destroy', time_table, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -50,4 +51,4 @@
 
 <br>
 
-<%= link_to 'New Time table', new_time_table_path %>
+
