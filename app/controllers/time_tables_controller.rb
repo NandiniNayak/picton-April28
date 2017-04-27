@@ -4,7 +4,7 @@ class TimeTablesController < ApplicationController
   # GET /time_tables
   # GET /time_tables.json
   def index
-    @time_tables = TimeTable.all
+    @time_tables = TimeTable.where(:student_name => current_user.email)
   end
 
   # GET /time_tables/1
